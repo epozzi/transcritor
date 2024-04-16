@@ -13,7 +13,6 @@ recognition.onresult = (event) => {
     }
 
     textoTrasncrito.textContent = texto + text
-
     scrollParaFinal()
 }
 

@@ -8,25 +8,42 @@
     <link rel="stylesheet" href="style.css">
     <script src="./app/transcreve.js" defer></script>
     <script src="./app/reconhecimento.js" defer></script>
+    <script src="./app/chamadaTradutor.js" defer></script>
 </head>
 <body>
     <header>
         <h1>Transcritor de vídeos!</h1>
     </header>
 
-    <section class="transcritor">
+    <main class="transcritor">
+        <div class="transcritor__idioma">
+            <label for="idiomas"> Escolha um idioma:</label>
+            <select name="" id="idiomas">
+                <option value="pt-Br">Portugês</option>
+                <option value="en">Inglês</option>
+                <option value="es-ES">Espanhol</option>
+                <option value="ja">Japonês</option>
+            </select>
+        </div>
+
         <div class="botoes">
             <button class="button comecar">Começar</button>
             <button class="button copiar">Copiar</button>
         </div>
 
-        <span class="texto-transcrito">
+        <span class="caixa-texto texto-transcrito">
             O texto irá aparecer aqui! <br><br>
             Para transcrever um vídeo tenha certeza que seu microfone estará mutado e não terá mais de uma fonte de áudio ao mesmo tempo ativa gerando sons.
             <br><br>
             *** Funciona melhor no Microsoft Edge v123 + ***
         </span>
-    </section>
+
+        <button class="button traduzir"> Traduzir</button>
+        <span class="caixa-texto texto-traduzido hidden">
+
+        </span>
+
+    </main>
 
     <footer class="rodape">
         <p>
