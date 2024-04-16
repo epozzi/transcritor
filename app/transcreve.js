@@ -20,3 +20,8 @@ btnStatoStop.addEventListener('click', () => {
 btnCopiar.onclick = () => {
     navigator.clipboard.writeText(texto)
 }
+
+function scrollParaFinal() {
+    const textoElement = document.querySelector('.texto-transcrito');
+    textoElement.scrollTop = textoElement.scrollHeight; // Rola para o final do texto
+}
