@@ -17,5 +17,8 @@ recognition.onresult = (event) => {
 }
 
 recognition.onend = (event) => {
+    if (!pararTranscricao) {
+        recognition.start();
+    }
     textoTrasncrito.textContent = texto
 }

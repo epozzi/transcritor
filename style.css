@@ -68,7 +68,7 @@ h1 {
     padding: 1rem;
     overflow-y: scroll;
     scroll-behavior: auto;
-    max-height: 60vh;
+    max-height: 50vh;
     line-height: 1.5rem;
     text-align: justify;
 }
