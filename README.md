@@ -16,4 +16,4 @@ libretranslate --load-only en,es,ja,pt
 
 Com isso o tradutor irá funcionar na porta 5000.
 
-Por enquanto a função de tradução está sendo acionada por um botão, mas será chamada a cada adição de buffer do transcritor e ativada com uma toggle-checkbox.
+A tradução é feita a cada buffer gerado pelo transcritor, e não a cada pequeno pedaço de texto.
