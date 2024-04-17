@@ -1,6 +1,6 @@
 # Projeto pessoal de Transcrição de vídeo e tradução para portugês
 
-Para transcrever o vídeo clicar no botão começar e o texti irá aparecer na caixa de texto abaixo.
+Para transcrever o vídeo clicar no botão começar e o texto irá aparecer na caixa de texto abaixo.
 
 
 ## Tradução
