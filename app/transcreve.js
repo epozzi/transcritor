@@ -3,10 +3,13 @@ const btnCopiar = document.querySelector('.copiar')
 const textoTrasncrito = document.querySelector('.texto-transcrito');
 const idiomaSelecionado = document.getElementById('idiomas');
 const btnTraduzir = document.querySelector('.traduzir');
+const btnCopiarTraducao = document.querySelector('.copiar-traducao');
 const textoTraduzido = document.querySelector('.texto-traduzido');
+const checkTraducao = document.querySelector('.checkbox-traducao');
 
 let texto = '';
 let pararTranscricao = false;
+let traduzirTexto = false;
 
 btnStatoStop.addEventListener('click', () => {
     if (btnStatoStop.classList.contains('transcrevendo')) {
@@ -43,6 +46,24 @@ btnTraduzir.onclick = () => {
         .catch(error => {
             console.log(error);
         });
+}
+
+btnCopiarTraducao.onclick = () => {
+    navigator.clipboard.writeText(textoTraduzido.textContent)
+}
+
+checkTraducao.onchange = () => {
+    if (checkTraducao.checked){
+        traduzirTexto = true
+        btnTraduzir.classList.toggle('hidden')
+        textoTraduzido.classList.remove('hidden')
+        textoTraduzido.classList.add('caixa-texto-com-traducao')
+        textoTrasncrito.classList.add('caixa-texto-com-traducao')
+        return
+    }
+
+    traduzirTexto = false
+    btnTraduzir.classList.toggle('hidden')
 }
 
 function scrollParaFinal() {

@@ -10,6 +10,15 @@ recognition.onresult = (event) => {
 
     if (event.results[event.results.length - 1].isFinal){
         texto += text
+        if (traduzirTexto) {
+            traduzir(textoTrasncrito.textContent)
+                .then(data => {
+                    textoTraduzido.textContent = data.translatedText
+                })
+                .catch(error => {
+                    console.log(error);
+                });
+        }
     }
 
     textoTrasncrito.textContent = texto + text
